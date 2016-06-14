@@ -14,6 +14,14 @@ import java.util.Enumeration;
  */
 public class NetUtils {
 
+    public static String getIP4Adress(Context context) {
+        String address = getIPAddress(context);
+        if (address == null || address.equals("0.0.0.0")) {
+            address = getPhoneIp();
+        }
+        return address;
+    }
+
     public static String getIPAddress(Context context) {
         String res = null;
         //获取wifi服务
