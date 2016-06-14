@@ -31,8 +31,6 @@ public class NetUtils {
             WifiInfo wifiInfo = wifiManager.getConnectionInfo();
             int ipAddress = wifiInfo.getIpAddress();
             res = intToIp(ipAddress);
-        } else {
-            wifiManager.setWifiEnabled(true);
         }
         return res;
     }
